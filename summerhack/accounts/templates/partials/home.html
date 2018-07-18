@@ -6,14 +6,20 @@
 <!-- <meta http-equiv="refresh" content="5; #">-->
  <div class="pt-5 container border-top-3 border-info">
      <h2><hr>Crypto Merkel Tree</h2>
-     <div class="pt-5 container border-top-3 border-info">
+     <div class="container border-top-3 border-info">
      {% csrf_token %}
          <div class="container">
-         {{ date }} <br>
+         {{ date|linebreaksbr }} <br>
      </div>
          <div class="container">
-                <hr>
-             <h2>KEY BY FILES</h2>
+             <h2><hr>SCAN A FOLDER</h2>
+             <form method="post" >
+                 <input type="file" name="folder_path">
+                 <input type="submit" value="Scan Folder" class="btn-dark">
+             </form>
+         </div>
+         <div class="pt-5 container">
+             <h2><hr>KEY BY FILES</h2>
      {{ buffer1|linebreaksbr }}
              </div>
          <div class="container border-top-3 border-info ">
