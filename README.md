@@ -1,4 +1,4 @@
-#SCRIPT D'INSTALLATION HACKSUMMER
+#SET UP L'APPLIPCATION
 
 
 Toutes les commandes doivent se faire dans un terminal et le script marche seulement sur ubuntu et mac (a part le apt-get) ubuntu
@@ -9,17 +9,16 @@ pip install -r requirement.txt
 
 Afin de lancer l'application il est necessaire de set-up les databases:
 ```
-python manage.py makemigrations accounts <br />
-python manage.py sqlmigrate accounts 0001<br />
-python manage.py migrate<br />
+python manage.py makemigration accounts
+python manage.py sqlmigrate accounts 0001
+python manage.py migrate
 ```
 
-
-Et enfin de créer un user:<br /><br />
+Et enfin de créer un user:<br />
 ```
 python manage.py createuser
 ```
-<br /><br />
+<br />
 On rempli les options pour le super User
 
 Enfin on lance le serveur:

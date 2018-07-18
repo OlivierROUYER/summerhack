@@ -14,8 +14,9 @@ class Migration(migrations.Migration):
             name='Tree',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('date_created', models.DateField()),
-                ('folder_path', models.CharField(max_length=40)),
+                ('created_at', models.DateTimeField(auto_now_add=True)),
+                ('updated_at', models.DateTimeField(auto_now=True)),
+                ('folder_path', models.CharField(max_length=200)),
                 ('key', models.CharField(max_length=100)),
             ],
         ),

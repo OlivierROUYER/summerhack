@@ -1,8 +1,14 @@
 import os
 import hashlib
+from accounts.models import Tree
+import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+date = datetime.datetime.now()
+
+
+#MyModel.objects.create(val=1)
 class MarkleTree:
     def __init__(self, root):
         self._linelength = 30
@@ -28,10 +34,14 @@ class MarkleTree:
         item = value[0]
         child = value[1]
         self.buffer += '%s %s \n' % (hash, item)
+        tree = Tree(folder_path=item, key=hash)
+        tree.save()
         if not child:
             return
         for itemhash, item in child.iteritems():
             self.buffer += '    -> %s %s\n' % (itemhash, item)
+            tree = Tree(folder_path=item, key=itemhash)
+            tree.save()
         for itemhash, item in child.iteritems():
             self.PrintMT(itemhash)
 
@@ -123,7 +133,6 @@ class MarkleTree:
                     self._hashlist[itemname] = self.md5sum(itemname)
 
 
-
 def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
     buffer = ""
     if a_tophash == b_tophash:
@@ -147,14 +156,19 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
     return buffer
 
 
-#if __name__ == "__main__":
+
+
+
+
+
+
+
+
+# if __name__ == "__main__":
 #    buffer = ""
 #    mt_a = MarkleTree('testA')
-#    #print(mt_a._mt)
+# print(mt_a._mt)
 #    mt_b = MarkleTree('testB')
 #    buffer += "{}{}".format(mt_a.buffer, mt_b.buffer)
 #    buffer += MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
 #    print(buffer)
-
-
-
