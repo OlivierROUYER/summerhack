@@ -3,9 +3,10 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
- <div class="pt-5 container">
-     <h2><hr>Crypto Merkel Tree</h2>
-     <div class="pt-5 container">
+ <meta http-equiv="refresh" content="5; URL=http://127.0.0.1:8000/home/">
+ <div class="pt-5 container border-top-3 border-info">
+     <h2>Crypto Merkel Tree</h2>
+     <div class="pt-5 container border-top-3 border-info">
      {% csrf_token %}
          <div class="container">
          {{ date }} <br>
@@ -15,8 +16,7 @@
              <h2>KEY BY FILES</h2>
      {{ buffer1|linebreaksbr }}
              </div>
-         <div class="container">
-             <hr>
+         <div class="container border-top-3 border-info ">
              <h2>RESULT</h2>
          {{ buffer2|linebreaksbr }}
              </div>
