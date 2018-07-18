@@ -3,11 +3,11 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
- <div class="container">
+ <div class="pt-5 container">
      <h2>Crypto</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    </form>
+     <div class="pt-5 container">
+     {% csrf_token %}
+     {{ buffer|linebreaksbr }}
+     </div>
  </div>
 {% endblock %}
