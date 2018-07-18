@@ -106,3 +106,5 @@ LOGIN_REDIRECT_URL = '/home/'
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = BASE_DIR + '/accounts/static/'
+
+DJANGO_SETTINGS_MODULE = "accounts.settings"
