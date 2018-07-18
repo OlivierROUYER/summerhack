@@ -4,10 +4,22 @@
 
 {% block content %}
  <div class="pt-5 container">
-     <h2>Crypto</h2>
+     <h2><hr>Crypto Merkel Tree</h2>
      <div class="pt-5 container">
      {% csrf_token %}
-     {{ buffer|linebreaksbr }}
+         <div class="container">
+         {{ date }} <br>
+     </div>
+         <div class="container">
+                <hr>
+             <h2>KEY BY FILES</h2>
+     {{ buffer1|linebreaksbr }}
+             </div>
+         <div class="container">
+             <hr>
+             <h2>RESULT</h2>
+         {{ buffer2|linebreaksbr }}
+             </div>
      </div>
  </div>
 {% endblock %}
