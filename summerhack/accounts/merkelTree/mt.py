@@ -168,13 +168,14 @@ def TestIfExist(mt_a):
     a_child = a_value[1]
     for itemhash, item in a_child.iteritems():
         mt_string = os.getcwd() + "/" + mt_a._root + "/" + item
-        print(mt_string)
-        tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
-        print(mt_string)
-        if tree_c.key != itemhash:
-            buffer.append("File {} modified :\nOld -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
+        if Tree.objects.all().filter(folder_path=mt_string).latest('created_at'):
+            tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
+            if tree_c.key != itemhash:
+                buffer.append("File {} modified :\nOld -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
+            else:
+                buffer.append("File {} not modified\n".format(item))
         else:
-            buffer.append("File {} not modified\n".format(item))
+            return []
    else:
        buffer = []
    return buffer
