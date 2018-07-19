@@ -37,16 +37,17 @@
        {% with error=buffer2 %}
          <h2>RESULT</h2><br>
          {% if error|length > 0 %}
+         <div class="alert alert-danger">
           {% for result in error %}
-            {{ result }}<br>
+            <strong>{{ result }}</strong>
           {% endfor %}
+        </div>
          {% else %}
           <div class="alert alert-success">
             <center><strong>EVERYTHING IS OK !</strong></center>
           </div>
          {% endif%}
        {% endwith %}
-       <h1>{{ buffer2|linebreaksbr }}</h1>
        <br>
        <hr>
     </div>
