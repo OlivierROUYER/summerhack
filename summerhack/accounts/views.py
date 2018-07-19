@@ -7,14 +7,10 @@ import datetime
 from django.http import *
 from accounts.models import Tree
 from django.http import JsonResponse
-#from django.core import serializers
-from django.forms.models import model_to_dict
-from django.core.files.storage import FileSystemStorage
-import os
 
 """
-    Fonction de connexion / login
-    """
+Fonction de connexion / login
+"""
 
 
 @csrf_exempt
@@ -23,11 +19,11 @@ def home(request):
     buffer1, buffer2 = "", ""
     mt_a = mt.MarkleTree('testA')
     # print(mt_a._mt)
-    mt_b = mt.MarkleTree('testB')
+    #mt_b = mt.MarkleTree('testB')
     buffer1 += "{}".format(mt_a.buffer)
-    buffer2 += mt.MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
-    print(mt_a._mt, mt_a._tophash, mt_a._root)
-    # print(mt_b, mt_b._tophash, mt_a._root)
+    #buffer2 += mt.MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
+    #print(mt_a._mt, mt_a._tophash, mt_a._root)
+    #print(mt_b, mt_b._tophash, mt_a._root)
     date = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
     return render(request, 'partials/home.html', locals())
 
@@ -43,7 +39,6 @@ def DisplayDatbase(request):
                 'folder_path': i.folder_path,
                 'key': i.key,
             })
+        return JsonResponse({'tree_list': tab}, content_type="application/json")
     except:
-        error = "Impossible de remplir le JSON"
-    # print(JsonResponse(locals()), content_type="application/json")
-    return JsonResponse({'tree_list': tab}, content_type="application/json")
+        return JsonResponse({'error': "Impossible de remplir le JSON"}, content_type="application/json")

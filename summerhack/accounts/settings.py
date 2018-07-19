@@ -71,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'accounts.wsgi.application'
 
-SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 

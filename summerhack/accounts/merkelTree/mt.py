@@ -3,7 +3,7 @@ import hashlib
 from accounts.models import Tree
 import datetime
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.relpath(__file__)))
 
 date = datetime.datetime.now()
 
@@ -12,7 +12,7 @@ date = datetime.datetime.now()
 class MarkleTree:
     def __init__(self, root):
         self._linelength = 30
-        self._root = BASE_DIR + "/merkelTree/" + root
+        self._root =BASE_DIR + "/merkelTree/" + root
         self._mt = {}
         self._hashlist = {}
         self._tophash = ''
@@ -33,14 +33,17 @@ class MarkleTree:
         value = self._mt[hash]
         item = value[0]
         child = value[1]
+        if BASE_DIR + "/merkelTree/" + self._root == item:
+            tree = Tree(folder_path=item, key=hash)
+        else:
+            tree = Tree(folder_path=BASE_DIR + "/merkelTree/" + item, key=hash)
         self.buffer += '%s %s \n' % (hash, item)
-        tree = Tree(folder_path=item, key=hash)
         tree.save()
         if not child:
             return
         for itemhash, item in child.iteritems():
             self.buffer += '    -> %s %s\n' % (itemhash, item)
-            tree = Tree(folder_path=item, key=itemhash)
+            tree = Tree(folder_path=BASE_DIR + "/merkelTree/TestA/" + item, key=itemhash)
             tree.save()
         for itemhash, item in child.iteritems():
             self.PrintMT(itemhash)
