@@ -15,12 +15,11 @@
  </nav>
  <div class="table-responsive">
    <br><br>
-   <div class="scan-folder container">
+   <!-- <div class="scan-folder container">
      <div class="panel panel-default">
        <div class="panel-heading"><strong>SCAN YOUR FOLDER</strong></div>
        <div class="panel-body"><br>
 
-         <!-- Standar Form -->
          <h4>Select folder from your computer</h4>
          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
            <div class="form-inline">
@@ -32,7 +31,7 @@
          </form>
        </div>
      </div>
-   </div><br>
+   </div><br> -->
    <div class="container border-top-3 border-info ">
        <hr>
        {% with error=buffer2 %}
@@ -43,7 +42,7 @@
           {% endfor %}
          {% else %}
           <div class="alert alert-success">
-            <strong>ALWAYS IS OK !</strong>
+            <center><strong>EVERYTHING IS OK !</strong></center>
           </div>
          {% endif%}
        {% endwith %}
