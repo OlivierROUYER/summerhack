@@ -4,20 +4,29 @@
 
 {% block content %}
 <!-- <meta http-equiv="refresh" content="5; #">-->
- <div class="pt-5 container border-top-3 border-info">
-     <h2><hr>Crypto Merkel Tree</h2>
-     <div class="container border-top-3 border-info">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div>
+     <h2>Crypto Merkel Tree</h2>
      {% csrf_token %}
-         <div class="container">
+     <div class="container">
          {{ date|linebreaksbr }} <br>
      </div>
-         <div class="container">
-             <h2><hr>SCAN A FOLDER</h2>
-             <form method="post" >
-                 <input type="file" name="folder_path">
-                 <input type="submit" value="Scan Folder" class="btn-dark">
-             </form>
-         </div>
+  </div>
+   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+     <ul class="navbar-nav">
+     </ul>
+   </div>
+ </nav>
+ <div class="pt-5 container border-top-3 border-info">
+      <div class="col-lg-6 col-sm-6 col-12 container">
+           <h4>SCAN A FOLDER</h4>
+           <form method="post" >
+             <label class="btn btn-primary">
+                 Browse&hellip; <input type="file" style="display: none;">
+             </label>
+             <input type="submit" value="Scan Folder" class="btn-dark">
+           </form>
+       </div>
          <div class="pt-5 container">
              <h2><hr>KEY BY FILES</h2>
      {{ buffer1|linebreaksbr }}

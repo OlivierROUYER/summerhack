@@ -105,6 +105,10 @@ LOGIN_REDIRECT_URL = '/home/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_URL = BASE_DIR + '/accounts/static/'
+STATIC_URL = '/static/' # the path in url
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 DJANGO_SETTINGS_MODULE = "accounts.settings"
