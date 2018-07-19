@@ -174,7 +174,7 @@ def TestIfExist(mt_a):
         if Tree.objects.all().filter(folder_path=mt_string).latest('created_at'):
             tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
             if tree_c.key != itemhash:
-                buffer.append("File {} modified :\nOld -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
+                buffer.append("File {} modified :\n Old -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
             else:
                 buffer.append("File {} not modified\n".format(item))
         else:
