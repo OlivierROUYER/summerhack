@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4eecd58-5d70-460d-946b-be5d94dfacfc" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file3.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summerhack/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,36 +48,11 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="accounts_tree: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="form.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/form.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,26 +65,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summerhack/accounts/urls.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="356">
+              <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#51#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1201">
+              <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -127,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="165" column="9" lean-forward="true" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+            <state relative-caret-position="309">
+              <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -139,8 +116,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="file3.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file3.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="file1.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file1.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3971e60-1486-483c-94d6-a8f089d61e0f/console.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file leaf-file-name="accounts_tree" pinned="false" current-in-tab="false">
-        <entry file="das://a7039595-70da-448e-ba3e-053acc6bacbc/schema/main/table/accounts_tree">
+        <entry file="das://b3971e60-1486-483c-94d6-a8f089d61e0f/schema/main/table/accounts_tree">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -164,6 +164,10 @@
       <find>summe</find>
       <find>profile</find>
       <find>Django_sett</find>
+      <find>printMT</find>
+      <find>#</find>
+      <find>Print</find>
+      <find>print</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -201,8 +205,10 @@
         <option value="$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html" />
         <option value="$PROJECT_DIR$/summerhack/accounts/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/views.py" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file1.txt" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file3.txt" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/views.py" />
       </list>
     </option>
   </component>
@@ -448,9 +454,9 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Python Console" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32939914" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32939914" />
-      <window_info anchor="bottom" id="Database Console" weight="0.32939914" />
+      <window_info anchor="bottom" id="Database Console" visible="true" weight="0.32939914" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17298289" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1717604" />
@@ -629,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -643,23 +642,6 @@
             <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#60#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -680,13 +662,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+        <state relative-caret-position="62">
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#60#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3971e60-1486-483c-94d6-a8f089d61e0f/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://b3971e60-1486-483c-94d6-a8f089d61e0f/schema/main/table/accounts_tree">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/file3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -704,12 +717,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1201">
+          <caret line="32" column="11" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="165" column="9" lean-forward="true" selection-start-line="165" selection-start-column="9" selection-end-line="165" selection-end-column="9" />
+        <state relative-caret-position="309">
+          <caret line="178" column="17" selection-start-line="178" selection-start-column="17" selection-end-line="178" selection-end-column="17" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>

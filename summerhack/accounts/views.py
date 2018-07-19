@@ -18,18 +18,18 @@ def home(request):
     now = datetime.datetime.now()
     buffer1, buffer2 = "", ""
     mt_a = mt.MarkleTree('testA')
-    #mt_b = mt.MarkleTree('testB')
     buffer1 += "{}".format(mt_a.buffer)
-    #buffer2 += mt.MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
+    buffer2 = mt.TestIfExist(mt_a)
     date = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
-    #print("------------------------tree-----------------------------")
-    #mt.TestIfExist('accounts/merkelTree/TestA/testtest')
     return render(request, 'partials/home.html', locals())
 
 
 def DisplayDatbase(request):
     try:
-        tree_list = Tree.objects.all()
+        date = Tree.objects.all().lastest('created_at')
+        tree_list = Tree.objects.all().filter(created_at=date.created_at)
+        print(date)
+        print(tree_list)
         tab = []
         for i in tree_list:
             tab.append({

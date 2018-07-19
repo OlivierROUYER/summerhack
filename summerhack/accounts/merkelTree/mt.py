@@ -12,7 +12,7 @@ date = datetime.datetime.now()
 class MarkleTree:
     def __init__(self, root):
         self._linelength = 30
-        self._root =BASE_DIR + "/merkelTree/" + root
+        self._root = BASE_DIR + "/merkelTree/" + root
         self._mt = {}
         self._hashlist = {}
         self._tophash = ''
@@ -33,17 +33,17 @@ class MarkleTree:
         value = self._mt[hash]
         item = value[0]
         child = value[1]
-        if BASE_DIR + "/merkelTree/" + self._root == item:
-            tree = Tree(folder_path=item, key=hash)
+        if self._root == item:
+            tree = Tree(folder_path=os.getcwd() + "/" + item, key=hash)
         else:
-            tree = Tree(folder_path=BASE_DIR + "/merkelTree/" + item, key=hash)
+            tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=hash)
         self.buffer += '%s %s \n' % (hash, item)
         tree.save()
         if not child:
             return
         for itemhash, item in child.iteritems():
             self.buffer += '    -> %s %s\n' % (itemhash, item)
-            tree = Tree(folder_path=BASE_DIR + "/merkelTree/TestA/" + item, key=itemhash)
+            tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=itemhash)
             tree.save()
         for itemhash, item in child.iteritems():
             self.PrintMT(itemhash)
@@ -68,7 +68,7 @@ class MarkleTree:
         # self.PrintHashList()
         self.MT()
         self.buffer += 'Merkle Tree for %s: \n' % self._root
-        self.PrintMT(self._tophash)
+        #self.PrintMT(self._tophash)
         self.Line()
 
     def md5sum(self, data):
@@ -149,7 +149,7 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
             try:
                 if b_child[itemhash] == item:
                     pass
-                    #buffer += "Info: SAME : {}\n".format(item)
+                    buffer += "Info: SAME : {}\n".format(item)
             except:
                 buffer += "Info: DIFFERENT : {}\n".format(item)
                 temp_value = mt_a._mt[itemhash]
@@ -160,9 +160,21 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
 
 
 def TestIfExist(mt_a):
-    tree_b = Tree.objects.all().filter(folder_path=mt_a._root).latest('created_at')
-    if tree_b is None or tree_b.key != mt_a._root.key:
-        return False
-    else:
-        return False
-
+   tophash = mt_a._tophash
+   buffer = []
+   tree_b = Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at')
+   if tree_b is None or tree_b.key != tophash:
+    a_value = mt_a._mt[tophash]
+    a_child = a_value[1]
+    for itemhash, item in a_child.iteritems():
+        mt_string = os.getcwd() + "/" + mt_a._root + "/" + item
+        print(mt_string)
+        tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
+        print(mt_string)
+        if tree_c.key != itemhash:
+            buffer.append("File {} modified :\nOld -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
+        else:
+            buffer.append("File {} not modified\n".format(item))
+   else:
+       buffer = []
+   return buffer
