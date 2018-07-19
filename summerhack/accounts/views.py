@@ -26,7 +26,7 @@ def home(request):
 
 def DisplayDatbase(request):
     try:
-        date = Tree.objects.all().lastest('created_at')
+        date = Tree.objects.all()
         tree_list = Tree.objects.all().filter(created_at=date.created_at)
         print(date)
         print(tree_list)
