@@ -162,7 +162,10 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
 def TestIfExist(mt_a):
    tophash = mt_a._tophash
    buffer = []
-   tree_b = Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at')
+   if Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at'):
+    tree_b = Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at')
+   else:
+       return ['No Folder found for testing']
    if tree_b is None or tree_b.key != tophash:
     a_value = mt_a._mt[tophash]
     a_child = a_value[1]
