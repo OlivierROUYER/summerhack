@@ -9,6 +9,7 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.home, name='home'),
+    url(r'^tree/$', views.DisplayDatbase),
     #url(r'^merkle-tree/', include(admin.site.merkleTree)),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),

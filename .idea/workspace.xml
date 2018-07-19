@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a4eecd58-5d70-460d-946b-be5d94dfacfc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summerhack/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summerhack/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/summerhack/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/summerhack/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +51,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db.sqlite3" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
+        <item name="accounts_tree: table" type="ffe0bd85:SqliteImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -52,41 +66,26 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="251">
+              <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="31">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="22" selection-start-column="22" selection-end-column="22" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summerhack/accounts/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="279">
+              <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -103,11 +102,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="454">
+              <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -115,14 +126,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="73" column="75" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="mt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -174,23 +200,23 @@
         <option value="$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html" />
         <option value="$PROJECT_DIR$/summerhack/accounts/views.py" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkle-tree/mt.py" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testA/testtest/test.txt" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testB/testtest/test.txt" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testB/dir2/file24.txt" />
         <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/testB/dir2/file23.txt" />
         <option value="$PROJECT_DIR$/summerhack/accounts/static/css/style.css" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/urls.py" />
         <option value="$PROJECT_DIR$/summerhack/accounts/apps.py" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/settings.py" />
         <option value="$PROJECT_DIR$/summerhack/accounts/admin.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/summerhack/accounts/forms.py" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/views.py" />
-        <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" />
         <option value="$PROJECT_DIR$/summerhack/accounts/models.py" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/urls.py" />
         <option value="$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/settings.py" />
+        <option value="$PROJECT_DIR$/summerhack/accounts/views.py" />
       </list>
     </option>
   </component>
@@ -249,33 +275,30 @@
               <item name="summerhack" type="462c0819:PsiDirectoryNode" />
               <item name="summerhack" type="462c0819:PsiDirectoryNode" />
               <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="merkelTree" type="462c0819:PsiDirectoryNode" />
-              <item name="testB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="merkelTree" type="462c0819:PsiDirectoryNode" />
-              <item name="testB" type="462c0819:PsiDirectoryNode" />
-              <item name="dir1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-              <item name="merkelTree" type="462c0819:PsiDirectoryNode" />
-              <item name="testB" type="462c0819:PsiDirectoryNode" />
-              <item name="dir2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
               <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="summerhack" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SUMMERHACK" type="b2602c69:ProjectViewProjectNode" />
@@ -424,10 +447,10 @@
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32939914" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32939914" />
-      <window_info anchor="bottom" id="Database Console" visible="true" weight="0.32939914" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17298289" />
+      <window_info active="true" anchor="bottom" id="Database Console" visible="true" weight="0.32939914" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17298289" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.3294621" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1717604" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32939914" />
       <window_info anchor="right" id="SciView" order="4" weight="0.3294621" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -491,13 +514,6 @@
             <caret line="56" selection-start-line="56" selection-end-line="56" selection-end-column="3" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -570,20 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="109" column="23" selection-start-line="109" selection-start-column="23" selection-end-line="109" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://598d2df4-15dc-464e-a240-fb5e6968d384/schema/main/table/accounts_tree">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -593,16 +595,6 @@
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/f224eebf-f1ba-4422-98d0-a0b1606a83c1/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="22" selection-start-column="22" selection-end-column="22" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
     </entry>
     <entry file="das://f224eebf-f1ba-4422-98d0-a0b1606a83c1/schema/main/table/accounts_tree">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -627,37 +619,27 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/a7039595-70da-448e-ba3e-053acc6bacbc/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="22" selection-start-column="22" selection-end-column="22" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="das://a7039595-70da-448e-ba3e-053acc6bacbc/schema/main/table/accounts_tree">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="279">
+          <caret line="9" column="72" selection-start-line="9" selection-start-column="72" selection-end-line="9" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -671,20 +653,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/partials/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        <state relative-caret-position="251">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/merkelTree/mt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="18" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/summerhack/accounts/models.py">
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="393">
+          <caret line="73" column="75" selection-start-line="73" selection-start-column="75" selection-end-line="73" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/templates/layouts/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://a7039595-70da-448e-ba3e-053acc6bacbc/schema/main/table/accounts_tree">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summerhack/accounts/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="48" column="4" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

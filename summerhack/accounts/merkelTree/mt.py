@@ -146,7 +146,8 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
         for itemhash, item in a_child.iteritems():
             try:
                 if b_child[itemhash] == item:
-                    buffer += "Info: SAME : {}\n".format(item)
+                    pass
+                    #buffer += "Info: SAME : {}\n".format(item)
             except:
                 buffer += "Info: DIFFERENT : {}\n".format(item)
                 temp_value = mt_a._mt[itemhash]
@@ -154,6 +155,12 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
                     diffhash = list(set(b_child.keys()) - set(a_child.keys()))
                     buffer += MTDiff(mt_a, itemhash, mt_b, diffhash[0])
     return buffer
+
+
+def TestIfExist(mt_a, a_tophash):
+    tree = Tree.object.get(key=a_tophash)
+    if tree is None:
+        Tree.object.get(key=a_tophash)
 
 
 

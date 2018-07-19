@@ -4,8 +4,14 @@ from .form import ConnexionForm
 from django.shortcuts import render, redirect
 from accounts.merkelTree import mt
 import datetime
+from django.http import *
+from accounts.models import Tree
+from django.http import JsonResponse
+#from django.core import serializers
+from django.forms.models import model_to_dict
 from django.core.files.storage import FileSystemStorage
 import os
+
 """
     Fonction de connexion / login
     """
@@ -20,7 +26,24 @@ def home(request):
     mt_b = mt.MarkleTree('testB')
     buffer1 += "{}".format(mt_a.buffer)
     buffer2 += mt.MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
+    print(mt_a._mt, mt_a._tophash, mt_a._root)
+    # print(mt_b, mt_b._tophash, mt_a._root)
     date = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
-    #print(buffer1, buffer2)
     return render(request, 'partials/home.html', locals())
 
+
+def DisplayDatbase(request):
+    try:
+        tree_list = Tree.objects.all()
+        tab = []
+        for i in tree_list:
+            tab.append({
+                'created_at': i.created_at,
+                'updated_at': i.updated_at,
+                'folder_path': i.folder_path,
+                'key': i.key,
+            })
+    except:
+        error = "Impossible de remplir le JSON"
+    # print(JsonResponse(locals()), content_type="application/json")
+    return JsonResponse({'tree_list': tab}, content_type="application/json")
