@@ -145,7 +145,6 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
         a_child = a_value[1]  # retrive the child list for merkle tree a
         b_value = mt_b._mt[b_tophash]
         b_child = b_value[1]  # retrive the child list for merkle tree b
-
         for itemhash, item in a_child.iteritems():
             try:
                 if b_child[itemhash] == item:
@@ -160,25 +159,10 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
     return buffer
 
 
-def TestIfExist(mt_a, a_tophash):
-    tree = Tree.object.get(key=a_tophash)
-    if tree is None:
-        Tree.object.get(key=a_tophash)
+def TestIfExist(mt_a):
+    tree_b = Tree.objects.all().filter(folder_path=mt_a._root).latest('created_at')
+    if tree_b is None or tree_b.key != mt_a._root.key:
+        return False
+    else:
+        return False
 
-
-
-
-
-
-
-
-
-
-# if __name__ == "__main__":
-#    buffer = ""
-#    mt_a = MarkleTree('testA')
-# print(mt_a._mt)
-#    mt_b = MarkleTree('testB')
-#    buffer += "{}{}".format(mt_a.buffer, mt_b.buffer)
-#    buffer += MTDiff(mt_a, mt_a._tophash, mt_b, mt_b._tophash)
-#    print(buffer)

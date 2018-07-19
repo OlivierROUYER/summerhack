@@ -9,7 +9,7 @@ pip install -r requirement.txt
 
 Afin de lancer l'application il est necessaire de set-up les databases:
 ```
-python manage.py makemigration accounts
+python manage.py makemigrations accounts
 python manage.py sqlmigrate accounts 0001
 python manage.py migrate
 ```
