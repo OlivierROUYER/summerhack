@@ -177,8 +177,4 @@ def TestIfExist(mt_a):
                 buffer.append("File {} modified :\n Old -> {}\n Actual -> {}\n".format(item, tree_c.key, itemhash))
             else:
                 buffer.append("File {} not modified\n".format(item))
-        else:
-            return []
-   else:
-       buffer = []
    return buffer
