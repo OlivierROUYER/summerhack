@@ -19,7 +19,7 @@ def home(request):
     buffer1, buffer2 = "", ""
     mt_a = mt.MarkleTree('testA')
     buffer1 += "{}".format(mt_a.buffer)
-    buffer2 = mt.TestIfExist(mt_a)
+    #buffer2 = mt.TestIfExist(mt_a)
     date = datetime.datetime.now().strftime("%m-%d-%Y %H:%M:%S")
     return render(request, 'partials/home.html', locals())
 

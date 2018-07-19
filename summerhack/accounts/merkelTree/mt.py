@@ -68,7 +68,7 @@ class MarkleTree:
         # self.PrintHashList()
         self.MT()
         self.buffer += 'Merkle Tree for %s: \n' % self._root
-        #self.PrintMT(self._tophash)
+        self.PrintMT(self._tophash)
         self.Line()
 
     def md5sum(self, data):
