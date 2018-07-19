@@ -1,27 +1,83 @@
 {% extends 'layouts/base.html' %}
-{% load static %}
+
 {% block title %}Login{% endblock %}
 
 {% block content %}
 <!-- <meta http-equiv="refresh" content="5; #">-->
- <div class="pt-5 container border-top-3 border-info" id="main-page">
-     <h2><hr>Crypto Merkel Tree</h2>
-     <div class="container border-info">
-     {% csrf_token %}
-         <div class="container">
-         {{ date }}
-     </div>
-         <!--<div class="container">
-             <h2><hr>SCAN A FOLDER</h2>
-             <form method="post" >
-                 <input type="file" value="Choose Folder" name="folder_path" webkitdirectory directory multiple>
-                 <input type="submit" value="Scan Folder" class="btn-dark">
-             </form>
-         </div>-->
-         <div class="container">
-             <h2><hr>KEY BY FILES</h2>
-     {{ buffer1|linebreaksbr }}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div>
+     <h2>Crypto Merkel Tree</h2>
+  </div>
+   <div class="collapse navbar-collapse" id="navbarNavDropdown">
+     <ul class="navbar-nav">
+     </ul>
+   </div>
+ </nav>
+ <div class="table-responsive">
+   <div class="scan-folder container">
+     <div class="panel panel-default">
+       <div class="panel-heading"><strong>SCAN YOUR FOLDER</strong></div>
+       <div class="panel-body"><br>
+
+         <!-- Standar Form -->
+         <h4>Select folder from your computer</h4>
+         <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+           <div class="form-inline">
+             <div class="form-group">
+               <input type="file" name="files[]" id="js-upload-files" multiple>
              </div>
+             <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload folder</button>
+           </div>
+         </form>
+       </div>
+     </div>
+   </div><br>
+      <!-- <div class="col-lg-6 col-sm-6 col-12 container">
+           <h4>SCAN A FOLDER</h4>
+           <form method="post" >
+             <label class="btn btn-primary">
+                 Browse&hellip; <input type="file" style="display: none;">
+             </label>
+             <input type="submit" value="Scan Folder" class="btn-dark">
+           </form>
+       </div> -->
+        <!-- <div class="folder pt-5 container">
+            <h2><hr>RESUME OF YOUR FILES ASSOCIATED BY KEY </h2>
+            <div class="key-file">
+            </div>
+        </div> -->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i>RESUME OF YOUR FILES</div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>File Location</th>
+                    <th>File Merkel Tree key</th>
+                    <th>Created at</th>
+                    <th>Last Update at</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>File Location</th>
+                    <th>File Merkel Tree key</th>
+                    <th>Created at</th>
+                    <th>Last Update at</th>
+                  </tr>
+                </tfoot>
+                <tbody class="key-file">
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small text-muted">{% csrf_token %}
+               <div class="container">
+                   Updated the {{ date|linebreaksbr }} <br>
+               </div></div>
+        </div>
          <div class="container border-top-3 border-info ">
              <hr>
              <h2>RESULT</h2>
