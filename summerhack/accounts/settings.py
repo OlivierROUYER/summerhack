@@ -71,7 +71,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'accounts.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
