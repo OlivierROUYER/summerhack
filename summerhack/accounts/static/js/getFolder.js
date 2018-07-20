@@ -36,7 +36,7 @@ setInterval(function () {
 	 $(".key-file").append(node);
      	});
       }
-  })}, 5000);
+  })}, 1000);
 
 setInterval(function () {
   	var settings = {
@@ -84,5 +84,5 @@ setInterval(function () {
            }
         }
        console.log(data);
-    })}, 5000);
+    })}, 1000);
 });
