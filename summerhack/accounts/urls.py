@@ -13,4 +13,5 @@ urlpatterns = [
     #url(r'^merkle-tree/', include(admin.site.merkleTree)),
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^buffer/$', views.ReturnBuffer),
 ]

@@ -38,3 +38,11 @@ def DisplayDatbase(request):
         return JsonResponse({'tree_list': tab}, content_type="application/json")
     except:
         return JsonResponse({'error': "Impossible de remplir le JSON"}, content_type="application/json")
+
+
+def ReturnBuffer(request):
+    buffer1, buffer2 = "", ""
+    mt_a = mt.MarkleTree('testA')
+    buffer1 += "{}".format(mt_a.buffer)
+    buffer2 = mt.TestIfExist(mt_a, mt_a._tophash)
+    return JsonResponse({'buffer1': buffer1, 'buffer2': buffer2}, content_type="application/json")

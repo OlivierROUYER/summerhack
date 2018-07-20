@@ -26,8 +26,6 @@ setInterval(function () {
        "<td>" + element.created_at + "</td>" +
        "<td>" + element.updated_at + "</td>";
        $(".key-file").append(node);
-       console.log(element);
-       console.log(index);
      });
   })}, 10000);
 
