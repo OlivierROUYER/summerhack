@@ -1,5 +1,6 @@
 $(document).ready(function() {
-     setInterval(function () {
+
+setInterval(function () {
 	var settings = {
 	    "async": true,
 	    "crossDomain": true,
@@ -11,10 +12,9 @@ $(document).ready(function() {
 		"Postman-Token": "ca0e836a-4d6e-479e-bf1d-a50b2a5c8e3a"
 	    }
 	};
-	 
-     $.ajax(settings).done(function getResult(response) {
-	 var data = response.tree_list;
-	 console.log(data);
+
+  $.ajax(settings).done(function getResult(response) {
+	   var data = response.tree_list;
      data.forEach(function (element, index) {
        var node = document.createElement("TR");
        var mess = "test";
@@ -29,6 +29,23 @@ $(document).ready(function() {
        console.log(element);
        console.log(index);
      });
-     console.log(data);
   })}, 10000);
+
+setInterval(function () {
+  	var settings = {
+  	    "async": true,
+  	    "crossDomain": true,
+  	    "url": "http://172.16.15.7:8000/buffer/",
+  	    "method": "GET",
+  	    "headers": {
+  		  "Authorization": "Basic cm9vdDpyb290",
+  		  "Cache-Control": "no-cache",
+  		  "Postman-Token": "ca0e836a-4d6e-479e-bf1d-a50b2a5c8e3a"
+  	   }
+  	};
+
+    $.ajax(settings).done(function getResult(response) {
+  	   var data = response.buffer2;
+       console.log(data);
+    })}, 10000);
 });
