@@ -44,12 +44,14 @@ setInterval(function () {
   		  "Postman-Token": "ca0e836a-4d6e-479e-bf1d-a50b2a5c8e3a"
   	   }
   	};
-
+    $("div[class*='message']").each(function (i, el) {
+	el.remove();
+    });
     $.ajax(settings).done(function getResult(response) {
   	   var data = response.buffer2;
        if (data.length != 0) {
          var node = document.createElement("DIV");
-         node.attr('class', 'alert alert-danger');
+         node.setAttribute('class', 'message alert alert-danger');
          var mess = "ERROR ! :(";
          var content = document.createTextNode(mess);
          var content = document.createTextNode(mess);
@@ -57,7 +59,7 @@ setInterval(function () {
          $(".resultScan").append(node);
        } else {
          var node = document.createElement("DIV");
-         node.attr('class', 'alert alert-success');
+         node.setAttribute('class', 'message alert alert-success');
          var mess = "EVERYTHING IS OK ! :)";
          var content = document.createTextNode(mess);
          var content = document.createTextNode(mess);
