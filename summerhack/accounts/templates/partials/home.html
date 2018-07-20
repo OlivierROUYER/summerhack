@@ -5,9 +5,10 @@
 {% block content %}
 <!-- <meta http-equiv="refresh" content="5; #">-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div>
+  <div class="container">
      <h2>Crypto Merkel Tree</h2>
   </div>
+    <div id="date"></div>
    <div class="collapse navbar-collapse" id="navbarNavDropdown">
      <ul class="navbar-nav">
      </ul>
@@ -39,7 +40,7 @@
          {% if error|length > 0 %}
          <div class="alert alert-danger">
           {% for result in error %}
-            <strong>{{ result }}</strong>
+            <strong>{{ result|linebreaksbr }}</strong>
           {% endfor %}
         </div>
          {% else %}
@@ -80,7 +81,7 @@
           </div>
           <div class="card-footer small text-muted">{% csrf_token %}
                <div class="container">
-                   Updated the {{ date|linebreaksbr }} <br>
+                   Updated the {{ date|date:"DATETIME_FORMAT"|linebreaksbr }} <br>
                </div></div>
         </div>
      </div>

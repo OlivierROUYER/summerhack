@@ -33,20 +33,23 @@ class MarkleTree:
         value = self._mt[hash]
         item = value[0]
         child = value[1]
-        if self._root == item:
-            tree = Tree(folder_path=os.getcwd() + "/" + item, key=hash)
-        else:
-            tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=hash)
-        self.buffer += '%s %s \n' % (hash, item)
-        tree.save()
-        if not child:
-            return
-        for itemhash, item in child.iteritems():
-            self.buffer += '    -> %s %s\n' % (itemhash, item)
-            tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=itemhash)
+        try:
+            if self._root == item:
+                tree = Tree(folder_path=os.getcwd() + "/" + item, key=hash)
+            else:
+                tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=hash)
+            self.buffer += '%s %s \n' % (hash, item)
             tree.save()
-        for itemhash, item in child.iteritems():
-            self.PrintMT(itemhash)
+            if not child:
+                return
+            for itemhash, item in child.iteritems():
+                self.buffer += '    -> %s %s\n' % (itemhash, item)
+                tree = Tree(folder_path=os.getcwd() + "/accounts/merkelTree/testA/" + item, key=itemhash)
+                tree.save()
+            for itemhash, item in child.iteritems():
+                self.PrintMT(itemhash)
+        except:
+            print("Error")
 
     def MT(self):
         for node, hash in self._hashlist.iteritems():
@@ -68,7 +71,8 @@ class MarkleTree:
         # self.PrintHashList()
         self.MT()
         self.buffer += 'Merkle Tree for %s: \n' % self._root
-        #self.PrintMT(self._tophash)
+        if not Tree.objects.all():
+            self.PrintMT(self._tophash)
         self.Line()
 
     def md5sum(self, data):
@@ -159,20 +163,25 @@ def MTDiff(mt_a, a_tophash, mt_b, b_tophash):
     return buffer
 
 
-def TestIfExist(mt_a):
-   tophash = mt_a._tophash
+def TestIfExist(mt_a, tophash):
    buffer = []
-   tree_b = Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at')
-   if tree_b is None or tree_b.key != tophash:
-    a_value = mt_a._mt[tophash]
-    a_child = a_value[1]
-    for itemhash, item in a_child.iteritems():
-        mt_string = os.getcwd() + "/" + mt_a._root + "/" + item
-        print(mt_string)
-        tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
-        print(mt_string)
-        if tree_c.key != itemhash:
-            buffer.append("File {} modified :\nOld Key-> {}\n Actual Key-> {}\n".format(item, tree_c.key, itemhash))
-   else:
-       buffer = []
+   try:
+       tree_b = Tree.objects.all().filter(folder_path=os.getcwd() + "/" + mt_a._root).latest('created_at')
+       if tree_b is None or tree_b.key != tophash:
+        a_value = mt_a._mt[tophash]
+        a_child = a_value[1]
+        for itemhash, item in a_child.iteritems():
+            mt_string = os.getcwd() + "/" + mt_a._root + "/" + item
+            tree_c = Tree.objects.all().filter(folder_path=mt_string).latest('created_at')
+            if tree_c.key != itemhash:
+                buffer.append("File {} modified :\nOld Key-> {}\n Actual Key-> {}\n".format(item, tree_c.key, itemhash))
+                temp_value = mt_a._mt[itemhash]
+                if len(temp_value[1]) > 0:  # check if this is a directory
+                    buffer.append(TestIfExist(mt_a, itemhash))
+            else:
+                buffer.append("{} not modified\n".format(item))
+       else:
+           buffer = []
+   except:
+       buffer = ['Database is empty']
    return buffer

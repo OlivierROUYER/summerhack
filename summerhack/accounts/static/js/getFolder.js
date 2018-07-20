@@ -1,16 +1,17 @@
 $(document).ready(function() {
 
+
   var settings = {
    "async": true,
    "crossDomain": true,
-   "url": "http://172.16.17.13:8000/tree/",
+   "url": "http://127.0.0.1:8000/tree/",
    "method": "GET",
    "headers": {
      "Authorization": "Basic cm9vdDpyb290",
      "Cache-Control": "no-cache",
      "Postman-Token": "ca0e836a-4d6e-479e-bf1d-a50b2a5c8e3a"
    }
-  }
+  };
 
   $.ajax(settings).done(function (response) {
      var data = response.tree_list;
