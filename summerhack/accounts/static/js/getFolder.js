@@ -52,16 +52,17 @@ setInterval(function () {
        if (data.length != 0) {
          var node = document.createElement("DIV");
          node.setAttribute('class', 'message alert alert-danger');
-         var mess = "ERROR ! :(";
+         var mess = " ";
          var content = document.createTextNode(mess);
-         node.innerHTML = JSON.stringify(data);
+         var datatmp = JSON.stringify(data);
+         datatmp = datatmp.replace(/["[\]]/gm, "<br>");
+         node.innerHTML = datatmp;
          node.appendChild(content);
          $(".resultScan").append(node);
        } else {
          var node = document.createElement("DIV");
          node.setAttribute('class', 'message alert alert-success');
          var mess = "EVERYTHING IS OK ! :)";
-         var content = document.createTextNode(mess);
          var content = document.createTextNode(mess);
          node.appendChild(content);
          $(".resultScan").append(node);
