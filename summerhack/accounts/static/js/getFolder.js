@@ -54,7 +54,7 @@ setInterval(function () {
          node.setAttribute('class', 'message alert alert-danger');
          var mess = "ERROR ! :(";
          var content = document.createTextNode(mess);
-         var content = document.createTextNode(mess);
+         node.innerHTML = JSON.stringify(data);
          node.appendChild(content);
          $(".resultScan").append(node);
        } else {

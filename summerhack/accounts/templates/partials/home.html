@@ -34,21 +34,9 @@
      </div>
    </div><br> -->
    <div class="container border-top-3 border-info ">
-       <hr>
-       {% with error=buffer2 %}
-         <h2>RESULT</h2><br>
-         {% if error|length > 0 %}
-         <div class="alert alert-danger">
-          {% for result in error %}
-            <strong>{{ result|linebreaksbr }}</strong>
-          {% endfor %}
-        </div>
-         {% else %}
-          <div class="alert alert-success">
-            <center><strong>EVERYTHING IS OK !</strong></center>
-          </div>
-         {% endif%}
-       {% endwith %}
+      <hr>
+       <div class="resultScan">
+       </div>
        <br>
        <hr>
     </div>
