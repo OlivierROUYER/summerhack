@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
   var settings = {
    "async": true,
    "crossDomain": true,
@@ -48,5 +46,6 @@ $(document).ready(function() {
        console.log(element);
        console.log(index);
      });
+     console.log(data);
   })}, 10000);
 });
