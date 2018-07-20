@@ -17,6 +17,7 @@ setInterval(function () {
 	   var data = response.tree_list;
      data.forEach(function (element, index) {
        var node = document.createElement("TR");
+       node.attr('id', 'destroyit');
        var mess = "test";
        var content = document.createTextNode(mess);
        node.appendChild(content);
@@ -27,7 +28,7 @@ setInterval(function () {
        "<td>" + element.updated_at + "</td>";
        $(".key-file").append(node);
      });
-  })}, 10000);
+  })}, 5000);
 
 setInterval(function () {
   	var settings = {
@@ -44,6 +45,12 @@ setInterval(function () {
 
     $.ajax(settings).done(function getResult(response) {
   	   var data = response.buffer2;
+       if (data.length != 0) {
+
+       } else {
+         var node = document.createElement("DIV");
+         var mess = "test";
+        }
        console.log(data);
-    })}, 10000);
+    })}, 5000);
 });
