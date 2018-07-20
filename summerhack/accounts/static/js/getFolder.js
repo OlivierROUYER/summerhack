@@ -46,10 +46,21 @@ setInterval(function () {
     $.ajax(settings).done(function getResult(response) {
   	   var data = response.buffer2;
        if (data.length != 0) {
-
+         var node = document.createElement("DIV");
+         node.attr('class', 'alert alert-danger');
+         var mess = "ERROR ! :(";
+         var content = document.createTextNode(mess);
+         var content = document.createTextNode(mess);
+         node.appendChild(content);
+         $(".resultScan").append(node);
        } else {
          var node = document.createElement("DIV");
-         var mess = "test";
+         node.attr('class', 'alert alert-success');
+         var mess = "EVERYTHING IS OK ! :)";
+         var content = document.createTextNode(mess);
+         var content = document.createTextNode(mess);
+         node.appendChild(content);
+         $(".resultScan").append(node);
         }
        console.log(data);
     })}, 5000);
