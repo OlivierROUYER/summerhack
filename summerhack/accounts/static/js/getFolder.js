@@ -12,12 +12,14 @@ setInterval(function () {
 		"Postman-Token": "ca0e836a-4d6e-479e-bf1d-a50b2a5c8e3a"
 	    }
 	};
-
+  $("tr[id*='Destroyit']").each(function (i, el) {
+      el.remove();
+  });
   $.ajax(settings).done(function getResult(response) {
 	   var data = response.tree_list;
      data.forEach(function (element, index) {
        var node = document.createElement("TR");
-       node.attr('id', 'destroyit');
+       node.setAttribute("id", "Destroyit");
        var mess = "test";
        var content = document.createTextNode(mess);
        node.appendChild(content);
