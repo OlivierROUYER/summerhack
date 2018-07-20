@@ -183,5 +183,5 @@ def TestIfExist(mt_a, tophash):
        else:
            buffer = []
    except:
-       buffer = ['Database is empty']
+       buffer = ['File {} not found in database\n'.format(item)]
    return buffer

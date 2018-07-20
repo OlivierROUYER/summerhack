@@ -7,7 +7,7 @@ setInterval(function () {
 	var settings = {
 	    "async": true,
 	    "crossDomain": true,
-	    "url": "http://172.16.15.7:8000/tree/",
+	    "url": "http://127.0.0.1:8000/tree/",
 	    "method": "GET",
 	    "headers": {
 		"Authorization": "Basic cm9vdDpyb290",
@@ -42,7 +42,7 @@ setInterval(function () {
   	var settings = {
   	    "async": true,
   	    "crossDomain": true,
-  	    "url": "http://172.16.15.7:8000/buffer/",
+  	    "url": "http://127.0.0.1:8000/buffer/",
   	    "method": "GET",
   	    "headers": {
   		  "Authorization": "Basic cm9vdDpyb290",
